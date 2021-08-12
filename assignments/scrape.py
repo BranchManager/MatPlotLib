@@ -196,8 +196,8 @@ else:
     secs = 20
     
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=654'
-URL="https://games.crossfit.com/leaderboard/open/2021"
-#URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=245"
+#URL="https://games.crossfit.com/leaderboard/open/2021"
+URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=482"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2750"
 
 driver = wd.Chrome(executable_path = PATH)
@@ -221,7 +221,7 @@ try:
     close.click()
 
     i = 0
-    for i in range(0,2750):
+    for i in range(0,2):
         print("index is now {}".format(i))
         thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
         table_class = thirdDiv.find_element_by_xpath("//table[@class='desktop athletes']")
