@@ -45,6 +45,9 @@ def Parse_into_table(parse_string):
                 i+=1
                 affiliate = sps[i]
                 print('He has affiliate')
+            elif i+1 < len(sps) and 'Age' not in sps[i+1]:
+                i+=1
+                affiliate = sps[i]     
             else:
                 affiliate = None
                 print('{} has no affiliate'.format(first_name))
@@ -183,7 +186,7 @@ def Parse_into_table(parse_string):
             #n+=1
             #if n == 3:
             #    print('returnning')
-        print("last thing captured {}".format(sps[i]))
+        #print("last thing captured {}".format(sps[i]))
     return lis
 
 
@@ -196,8 +199,8 @@ else:
     secs = 20
     
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=654'
-#URL="https://games.crossfit.com/leaderboard/open/2021"
-URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=482"
+URL="https://games.crossfit.com/leaderboard/open/2021"
+#URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=482"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2750"
 
 driver = wd.Chrome(executable_path = PATH)
@@ -221,7 +224,7 @@ try:
     close.click()
 
     i = 0
-    for i in range(0,2):
+    for i in range(0,2750):
         print("index is now {}".format(i))
         thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
         table_class = thirdDiv.find_element_by_xpath("//table[@class='desktop athletes']")
