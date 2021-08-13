@@ -126,6 +126,9 @@ def Parse_into_table(parse_string):
                         rept4 = None
                         #fourth = None
                     #print(rep_or_time)
+                    if 'reps' in sps[i]:
+                        if i+1 < len(sps): i+=1
+
                     if i+1 < len(sps):
                         i-=1
                    
@@ -201,7 +204,7 @@ else:
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=654'
 URL="https://games.crossfit.com/leaderboard/open/2021"
 #URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=482"
-#URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2750"
+#URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760"
 
 driver = wd.Chrome(executable_path = PATH)
 
