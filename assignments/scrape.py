@@ -126,8 +126,18 @@ def Parse_into_table(parse_string):
                         rept4 = None
                         #fourth = None
                     #print(rep_or_time)
-                    if 'reps' in sps[i]:
-                        if i+1 < len(sps): i+=1
+                
+                    while i+1 < len(sps) and ('\t' not in sps[i] or sps[i] != ''):
+                        #print("while in while loop sps[i] = {}".format(sps[i]))
+                        i+=1
+                    if sps[i] == '':
+                        print("I got a null \n")
+                        i+=1
+
+                    #if 'reps' in sps[i]:
+                     #   if i+1 < len(sps): i+=1
+                    #if 'Tiebreak' in sps[i]:
+                     #   if i+1 < len(sps): i+=1
 
                     if i+1 < len(sps):
                         i-=1
@@ -175,7 +185,7 @@ def Parse_into_table(parse_string):
                     if i+2 < len(sps):i+=2
                     
                 elif i+1 < len(sps) and ''== sps[i+1]:
-                    #print('I got a supposed three space')
+                    print('I got a supposed three space')
                     if i+3 < len(sps):i+=3
                 
             
@@ -201,8 +211,8 @@ else:
     PATH = "/Users/noahbranch/Documents/CodeAndDev.nosync/Chrome_Driver/chromedriver"
     secs = 20
     
-#URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=654'
-URL="https://games.crossfit.com/leaderboard/open/2021"
+URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760'
+#URL="https://games.crossfit.com/leaderboard/open/2021"
 #URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=482"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760"
 
@@ -227,7 +237,7 @@ try:
     close.click()
 
     i = 0
-    for i in range(0,2750):
+    for i in range(0,2):
         print("index is now {}".format(i))
         thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
         table_class = thirdDiv.find_element_by_xpath("//table[@class='desktop athletes']")
