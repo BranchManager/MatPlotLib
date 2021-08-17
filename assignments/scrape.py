@@ -110,6 +110,10 @@ def Parse_into_table(parse_string):
                     while i+1 < len(sps) and 'Tiebreak'not in sps[i+1]:
                         i+=1
                     if i+1 < len(sps):i+=1
+                elif 'bear crawl' in sps[i]:
+                    while i+1 < len(sps) and 'Tiebreak'not in sps[i+1]:
+                        i+=1
+                    if i+1 < len(sps):i+=1
                 elif '--'in WO:
                     #print("User DID NOT log workout {} placinb is Next Line".format(j))
                     rep_or_time = WO
@@ -211,8 +215,9 @@ else:
     PATH = "/Users/noahbranch/Documents/CodeAndDev.nosync/Chrome_Driver/chromedriver"
     secs = 20
     
-URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760'
+#URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760'
 #URL="https://games.crossfit.com/leaderboard/open/2021"
+URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2062"
 #URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=482"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760"
 
@@ -237,7 +242,7 @@ try:
     close.click()
 
     i = 0
-    for i in range(0,2):
+    for i in range(0,2750):
         print("index is now {}".format(i))
         thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
         table_class = thirdDiv.find_element_by_xpath("//table[@class='desktop athletes']")
