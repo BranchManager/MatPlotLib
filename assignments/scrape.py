@@ -114,10 +114,7 @@ def Parse_into_table(parse_string):
                     while i+1 < len(sps) and 'Tiebreak'not in sps[i+1]:
                         i+=1
                     if i+1 < len(sps):i+=1
-                elif 'squats' in sps[i]:
-                    while i+1 < len(sps) and 'Tiebreak'not in sps[i+1]:
-                        i+=1
-                    if i+1 < len(sps):i+=1
+                
                 elif '--'in WO:
                     #print("User DID NOT log workout {} placinb is Next Line".format(j))
                     rep_or_time = WO
@@ -149,6 +146,10 @@ def Parse_into_table(parse_string):
 
                     if i+1 < len(sps):
                         i-=1
+                elif 'squats' in sps[i]:
+                    while i+1 < len(sps) and 'Tiebreak'not in sps[i+1]:
+                        i+=1
+                    if i+1 < len(sps):i+=1
                    
                 elif i+1 < len(sps) and 'Tiebreak' in sps[i]: #if i get rid of this tie break will be the score i think
                    # print('if this tie break {} and folliwng below'.format(sps[i]))
