@@ -9,15 +9,30 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as st
 
-def Parse_into_table(parse_string):
+def Parse_into_table(parse_string,myinput):
     alp = parse_string.find('21.3')
+    
     #print(alp)
     lis = []
     #print(parse_string[189:194])
     #print(parse_string[194:])
-    split_parsed_string = parse_string[196:].splitlines()
-    print(split_parsed_string)
-    sps = split_parsed_string
+    print("my input below")
+    print(myinput)
+    print(type(myinput))
+    if myinput == 1:
+        split_parsed_string = parse_string[196:].splitlines()
+        print(split_parsed_string)
+        sps = split_parsed_string
+    elif myinput == 2:
+        print("in numero 2")
+        '''with open('input2.txt','r') as file:
+            text = file.read()
+            print(text)'''
+        import input
+        sps = input.my_list
+        print(sps)
+
+        #sys.exit(1)
     #for i in range(len(sps)):
     i = 0
     n = 0
@@ -27,6 +42,8 @@ def Parse_into_table(parse_string):
                               'points','21.1','21.1 time','21.2','21.2 time','21.3','21.3 time','21.4','weight'])
     matches = ['in','cm','lb','kg']
     while i+1 < len(sps):
+        check = False
+        checkTab = False
         if(sps[i+1] == '\t'):
             Place = sps[i] #first is rank
             print('rank is {}'.format(sps[i]))
@@ -116,7 +133,7 @@ def Parse_into_table(parse_string):
                     if i+1 < len(sps):i+=1
                 
                 elif '--'in WO:
-                    #print("User DID NOT log workout {} placinb is Next Line".format(j))
+                    print("User DID NOT log workout {} placinb is Next Line".format(j))
                     rep_or_time = WO
                     if j == 0:
                         rept1 = None
@@ -130,14 +147,29 @@ def Parse_into_table(parse_string):
                     elif j == 3:
                         rept4 = None
                         #fourth = None
-                    #print(rep_or_time)
+                    print(rep_or_time)
                 
-                    while i+1 < len(sps) and ('\t' not in sps[i] or sps[i] != ''):
-                        #print("while in while loop sps[i] = {}".format(sps[i]))
+                    while i+1 < len(sps) and ('\t' != sps[i] and sps[i] != ''):
+                        print("while in while loop or -- sps[i] = {}".format(sps[i]))
+                        if sps[i] == '\t':
+                            print("it is tab")
+                        if sps[i] == '':
+                            print(" it is a empty string")
                         i+=1
-                    if sps[i] == '':
-                        print("I got a null \n")
-                        i+=1
+                    print("sps now before empty string check {}".format(sps[i]))
+                    if i+1 < len(sps) and sps[i] == '':
+                        print("in -- I got a null \n")
+                        
+                        if i+2 < len(sps) and sps[i+2] == '': #if there are three consecutive empyt strings
+                            checkTab = True
+                            i+=4
+                            print("the next 2 one is {}".format(sps[i]))
+                        else:
+                            checkTab = True
+                            i+=3
+                            print("the next one is {}".format(sps[i]))
+
+                        
 
                     #if 'reps' in sps[i]:
                      #   if i+1 < len(sps): i+=1
@@ -146,6 +178,8 @@ def Parse_into_table(parse_string):
 
                     if i+1 < len(sps):
                         i-=1
+                        print("subtracting sps[i]= {} sps[i-1]={} sps[i+1]={}".format(sps[i],sps[i-1],sps[i+1]))
+                        print("sps[i+2] ={} sps[i+3] = {}".format(sps[i+2],sps[i+3]))
                 elif 'squats' in sps[i]:
                     while i+1 < len(sps) and 'Tiebreak'not in sps[i+1]:
                         i+=1
@@ -188,14 +222,18 @@ def Parse_into_table(parse_string):
                     elif i+1 < len(sps) and ''==sps[i+1]:
                         if i+3 < len(sps):i+=3
 
-                elif i+1 < len(sps) and '\t' == sps[i+1]: #'Judged by' not in sps [i+1]:
-                    #print('there was an initial tab')
-                    tab = '\t'
-                    if i+2 < len(sps):i+=2
+                elif i+1 < len(sps) and '\t' == sps[i+1]:
+                    if checkTab == False: #'Judged by' not in sps [i+1]:
+                        print('there was an initial tab')
+                        tab = '\t'
+                        if i+2 < len(sps):i+=2
                     
                 elif i+1 < len(sps) and ''== sps[i+1]:
-                    print('I got a supposed three space')
-                    if i+3 < len(sps):i+=3
+                    if check == True:
+                        print("the check was true \n")
+                    if check == False:
+                        print('I got a supposed three space')
+                        if i+3 < len(sps):i+=3
                 
             
             print('last thing captured in for loop before added to list {}'.format(sps[i]))
@@ -213,6 +251,7 @@ def Parse_into_table(parse_string):
 
 
 #print(sys.platform)
+parse_this = ''
 if sys.platform == "linux":
     PATH = "/home/nbranch/Documents/MatPlotLib/chromedriver"
     secs = 5
@@ -221,13 +260,15 @@ else:
     secs = 20
     
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760'
-URL="https://games.crossfit.com/leaderboard/open/2021"
-#URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2361"
+#URL="https://games.crossfit.com/leaderboard/open/2021"
+URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2361"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2062"
 #URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=482"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760"
 
-driver = wd.Chrome(executable_path = PATH)
+myinput = int(input("1. Scrape website \n2. Read file \n"))
+if myinput == 1:
+    driver = wd.Chrome(executable_path = PATH)
 
 
 columns=['first_name','lastname','Placing','country',
@@ -237,28 +278,38 @@ columns=['first_name','lastname','Placing','country',
 MyMainList = []
 THE_list = []
 
-driver.get(URL)
+if myinput == 1:
+    driver.get(URL)
 
-time.sleep(secs)
+    time.sleep(secs)
+
 try:
-    print(type(driver))
-    close = driver.find_element_by_css_selector('.mc-closeModal')
-    accept = driver.find_element_by_css_selector('.btn.btn-callout.btn-privacy-policy-accept')
-    accept.click()
-    close.click()
+    
+    #myinput = input("1. Scrape website \n 2. Read file")
+    if myinput == 1:
+        print(type(driver))
+        close = driver.find_element_by_css_selector('.mc-closeModal')
+        accept = driver.find_element_by_css_selector('.btn.btn-callout.btn-privacy-policy-accept')
+        accept.click()
+        close.click()
+    
 
     i = 0
-    for i in range(0,2750):
+    for i in range(0,1):
         print("index is now {}".format(i))
-        thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
-        table_class = thirdDiv.find_element_by_xpath("//table[@class='desktop athletes']")
+        if myinput == 1: 
+            thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
+            table_class = thirdDiv.find_element_by_xpath("//table[@class='desktop athletes']")
 
         #print(thirdDiv.text)
         #print(table_class.get_attribute('innerText'))
-        parse_this = table_class.get_attribute('innerText')
-        MyMainList.extend(Parse_into_table(parse_this))
+            parse_this = table_class.get_attribute('innerText')
+        MyMainList.extend(Parse_into_table(parse_this,myinput))
 
         print('I have ReTuNeD!')
+
+        if myinput == 2:
+            sys.exit(1)
         #display(table)
         #df.append(table)
         #df1.append(df2)
@@ -301,6 +352,10 @@ except Exception as e:
     print('Error Class: ', e[0])
     print('Error Message: ', e[1])
     print('Error Traceback: ', traceback.format_tb(e[2]))
+    if 'ERR_INTERNET_DISCONNECTED' in traceback.format_tb(e[2]):
+        sys.exit(1)
+    else:
+        print('weon keepit spinin')
     
-    sys.exit(1)
+    #sys.exit(1)
         #print(webpage.text)
