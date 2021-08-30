@@ -1,7 +1,51 @@
-,first_name,lastname,Placing,country,continent,affiliate,age_and_or_height,points,21.1,21.1 time,21.2,21.2 time,21.3,21.3 time,21.4,weight
-0,ARMANDO,FELIX,118001,United States,North America,Gnardog CrossFit,69 in | 209 lb,426956,116564th (392 reps - f),,110519th (16:40 - f),225 reps,100206th (9:31 - f),180 reps,99667th (100 lbs - f),Weight lifted: 100 lbs.
-1,CHRIS,ZUCK,118002,United States,North America,The Pack CrossFit,,426960,116854th (167 reps - f),,110205th (10:08 - f),225 reps,100367th (11:25 - f),180 reps,99534th (115 lbs - f),Weight lifted: 115 lbs.
-2,STEPHEN,HUDEC,118002,United States,North America,CrossFit Proton,178 cm | 85 kg,426960,116869th (--),,110327th (12:44 - f),225 reps,99902nd (7:42 - f),180 reps,99862nd (66 lbs - f),Weight lifted: 66 lbs.
-3,SERGEY,KUPRIYANOV,118004,Russian Federation,Asia,Natrium CrossFit,,426962,115764th (118 reps - s),,110650th (19:59 - f),225 reps,100553rd (151 reps - f),,99995th (35 lbs - f),Weight lifted: 35 lbs.
-4,CARLOS,RIVEIRO VILLANUEVA,118005,Spain,Europe,CrossFit Ponferrada,,426965,117347th (--),,Weight lifted: 46 lbs.,Weight lifted: 46 lbs.,Weight lifted: 46 lbs.,Weight lifted: 46 lbs.,Weight lifted: 46 lbs.,Weight lifted: 46 lbs.
-5,GORDON,HUTTON,118051,United Kingdom,Europe,In2 CrossFit Farnham,,427138,116869th (--),,110754th (--),,134707th (--),,134707th (--),
+,first_name,lastname,Placing,country,continent,Age,affiliate,Height and Weight,points,21.1,21.1 time,21.2,21.2 time,21.3,21.3 time,21.4,weight
+0,XUHAN,ZHANG,24051,China,Asia,Age 24,CrossFit N Plus,,116166,14369th (384 reps),,33877th (17:20),225 reps,26193rd (152 reps),,41727th (190 lbs),Weight lifted: 190 lbs.
+1,CYRUS,MORSE,24052,United States,North America,Age 46,First City CrossFit,72 in | 208 lb,116169,27634th (376 reps),,32056th (17:05),225 reps,45013th (139 reps),,11466th (235 lbs),Weight lifted: 235 lbs.
+2,LOGAN,BLACKER-WOODS,24052,United States,North America,Age 40,CrossFit High Voltage,71 in | 162 lb,116169,16961st (382 reps),,40712th (18:12),225 reps,12798th (170 reps),,45698th (185 lbs),Weight lifted: 185 lbs.
+3,GBEMI,FISHER,24054,United Kingdom,Europe,Age 33,,186 cm | 104 kg,116170,66429th (215 reps),,24299th (16:04),225 reps,20463rd (157 reps),,4979th (254 lbs),Weight lifted: 254 lbs.
+4,DAKOTA,PENA,24055,United States,North America,Age 20,Bear Canyon CrossFit,,116172,11280th (387 reps),,17342nd (15:05),225 reps,55515th (135 reps),,32035th (205 lbs),Weight lifted: 205 lbs.
+5,ANDREW,STODDARD,24056,United States,North America,Age 38,CrossFit Fountain Inn,74 in | 205 lb,116177,35088th (342 reps),,31935th (17:04),225 reps,33941st (146 reps),,15213th (226 lbs),Weight lifted: 226 lbs.
+6,JASON,LEVENTIS,24056,United States,North America,Age 35,,71 in | 200 lb,116177,32291st (366 reps),,22479th (15:50),225 reps,33999th (146 reps),,27408th (207 lbs),Weight lifted: 207 lbs.
+7,ROMAIN,TOINON,24058,France,Europe,Age 27,CrossFit Roanne,175 cm | 86 kg,116180,33279th (357 reps),,53896th (19:44),225 reps,26075th (152 reps),,2930th (265 lbs),Weight lifted: 265 lbs.
+8,MATHIEU,TREVE,24059,France,Europe,Age 34,CrossFit BlueBird,,116182,26372nd (377 reps),,51750th (19:31),225 reps,18094th (159 reps),,19966th (220 lbs),Weight lifted: 220 lbs.
+9,RAUL,GONZALEZ,24060,United States,North America,Age 29,CrossFit Rx'd Placentia,66 in | 205 lb,116185,17872nd (382 reps),,17968th (15:11),225 reps,54560th (135 reps),,25785th (210 lbs),Weight lifted: 210 lbs.
+10,ANGUS,SIMPSON,24061,Australia,Oceania,Age 24,,,116188,59479th (218 reps),,19986th (15:29),225 reps,22303rd (155 reps),,14420th (227 lbs),Weight lifted: 227 lbs.
+11,JORGE,GONZALEZ,24062,United States,North America,Age 44,San Patricio CrossFit,71 in | 188 lb,116197,28242nd (375 reps),,12366th (14:21),225 reps,30469th (148 reps),,45120th (186 lbs),Weight lifted: 186 lbs.
+12,IVAN,SOBERANES,24063,United States,North America,Age 32,CrossFit 321,175 lb,116199,16846th (382 reps),,2566th (12:07),225 reps,27583rd (150 reps),,69204th (155 lbs),Weight lifted: 155 lbs.
+13,JESSE,LEWIS,24063,United States,North America,Age 45,20 Mile CrossFit,70 in | 170 lb,116199,23496th (378 reps),,51207th (19:28),225 reps,18938th (158 reps),,22558th (215 lbs),Weight lifted: 215 lbs.
+14,TOM,WILCOX,24065,United Kingdom,Europe,Age 32,,75 kg,116205,15261st (384 reps),,4796th (12:49),225 reps,28995th (150 reps),,67153rd (161 lbs),Weight lifted: 161 lbs.
+15,ERIC,SCHUETTENBERG,24066,United States,North America,Age 32,Capital CrossFit,75 in | 198 lb,116206,23406th (378 reps),,22244th (15:48),225 reps,26948th (151 reps),,43608th (187 lbs),Weight lifted: 187 lbs.
+16,MICHAEL,KEON,24067,Australia,Oceania,Age 31,,,116208,9687th (388 reps),,18699th (15:18),225 reps,35087th (145 reps),,52735th (180 lbs),Weight lifted: 180 lbs.
+17,THOMAS,HUNT,24067,United Kingdom,Europe,Age 37,CrossFit GTF,180 cm | 193 lb,116208,56730th (220 reps),,15683rd (14:51),225 reps,31538th (147 reps),,12257th (232 lbs),Weight lifted: 232 lbs.
+18,RIUM,MUIR,24067,United States,North America,Age 34,CrossFit NewFound,70 in | 200 lb,116208,33786th (353 reps),,29200th (16:43),225 reps,35941st (145 reps),,17281st (225 lbs),Weight lifted: 225 lbs.
+19,GREG,NEVILLE,24070,United States,North America,Age 29,CrossFit Explode,71 in | 182 lb,116216,43988th (275 reps),,20210th (15:31),225 reps,13250th (167 reps),,38768th (195 lbs),Weight lifted: 195 lbs.
+20,STEPHEN,RUDDER,24071,United States,North America,Age 41,CrossFit 7 Hills,69 in | 165 lb,116231,21393rd (379 reps),,23560th (15:58),225 reps,27647th (150 reps),,43631st (187 lbs),Weight lifted: 187 lbs.
+21,CARSON,VISSER,24072,Canada,North America,Age 21,CrossFit Queen Street,70 in | 175 lb,116239,8859th (389 reps),,23014th (15:54),225 reps,43089th (140 reps),,41277th (192 lbs),Weight lifted: 192 lbs.
+22,GONG BAO,LI,24072,China,Asia,Age 27,DauDin CrossFit,,116239,26817th (376 reps),,25026th (16:10),225 reps,41044th (141 reps),,23352nd (215 lbs),Weight lifted: 215 lbs.
+23,WES,SANDERS,24074,United States,North America,Age 42,CrossFit Gallia,70 in | 160 lb,116240,30401st (374 reps),,31623rd (17:01),225 reps,24564th (153 reps),,29652nd (205 lbs),Weight lifted: 205 lbs.
+24,JASON,CLOUSE,24075,United States,North America,Age 43,CrossFit Fort Vancouver,68 in | 155 lb,116247,17162nd (382 reps),,15433rd (14:49),225 reps,22341st (155 reps),,61311th (167 lbs),Weight lifted: 167 lbs.
+25,SHI,YI,24076,China,Asia,Age 33,CrossFit N Plus,,116248,16402nd (383 reps),,13604th (14:33),225 reps,54319th (135 reps),,31923rd (205 lbs),Weight lifted: 205 lbs.
+26,EDUARDO,MORA,24077,Venezuela,South America,Age 30,,,116249,32478th (364 reps),,36419th (17:40),225 reps,28123rd (150 reps),,19229th (221 lbs),Weight lifted: 221 lbs.
+27,ANTONIO CARLOS,GALEGO JR.,24078,Brazil,South America,Age 28,CrossFit Black House,179 cm | 95 kg,116251,49803rd (224 reps),,36285th (17:39),225 reps,24169th (153 reps),,5994th (248 lbs),Weight lifted: 248 lbs.
+28,BEN,FRAGA,24078,United States,North America,Age 43,Iowa City CrossFit,70 in | 178 lb,116251,25703rd (377 reps),,48091st (19:06),225 reps,21110th (156 reps),,21347th (217 lbs),Weight lifted: 217 lbs.
+29,JOSH,DUNCAN,24080,United States,North America,Age 28,CrossFit Millstone,170 lb,116258,47816th (242 reps),,29982nd (16:49),225 reps,13362nd (166 reps),,25098th (210 lbs),Weight lifted: 210 lbs.
+30,MICHAEL,SHALTRY,24081,United States,North America,Age 43,Idaho Falls Family YMCA,72 in | 190 lb,116260,16900th (382 reps),,47338th (19:00),225 reps,27448th (151 reps),,24574th (212 lbs),Weight lifted: 212 lbs.
+31,JAMES,PEACH,24082,Australia,Oceania,Age 36,CrossFit Kia Kaha,,116262,11230th (387 reps),,14144th (14:38),225 reps,55143rd (135 reps),,35745th (199 lbs),Weight lifted: 199 lbs.
+32,NICK,BURNESS,24083,Australia,Oceania,Age 32,CrossFit Evexia,,116265,52575th (222 reps),,18817th (15:19),225 reps,36197th (144 reps),,8676th (242 lbs),Weight lifted: 242 lbs.
+33,JACOB,OWEN,24084,United States,North America,Age 25,CrossFit Bangarang,5 in | 180 lb,116268,12437th (386 reps),,43778th (18:35),225 reps,36843rd (144 reps),,23210th (215 lbs),Weight lifted: 215 lbs.
+34,SEAN,FERGUSON,24085,New Zealand,Oceania,Age 31,,178 cm | 73 kg,116269,11042nd (387 reps),,24554th (16:06),225 reps,26933rd (151 reps),,53740th (177 lbs),Weight lifted: 177 lbs.
+35,SCOT,PETERSON,24086,United States,North America,Age 36,Trident CrossFit,67 in | 163 lb,116281,23608th (378 reps),,27780th (16:32),225 reps,23709th (154 reps),,41184th (192 lbs),Weight lifted: 192 lbs.
+36,CHRIS,EILING,24087,Germany,Europe,Age 37,CrossFit Mins,182 cm | 93 kg,116282,16014th (383 reps),,26510th (16:22),225 reps,55259th (135 reps),,18499th (224 lbs),Weight lifted: 224 lbs.
+37,WILSON,AMAYA,24088,Honduras,North America,Age 31,,,116285,10070th (388 reps),,26510th (16:22),225 reps,22229th (155 reps),,57476th (175 lbs),Weight lifted: 175 lbs.
+38,CONNOR,O'BRIEN,24089,United States,North America,Age 34,Rhapsody CrossFit,,116297,29137th (375 reps),,35766th (17:35),225 reps,40007th (142 reps),,11387th (235 lbs),Weight lifted: 235 lbs.
+39,DAVID,FOSTER,24090,United States,North America,Age 38,CrossFit Carnivore,71 in | 190 lb,116306,37912th (321 reps),,41086th (18:15),225 reps,20807th (156 reps),,16501st (225 lbs),Weight lifted: 225 lbs.
+40,JOSEPH,WATERS,24091,United States,North America,Age 33,,69 in | 190 lb,116310,37674th (324 reps),,37457th (17:48),225 reps,30007th (149 reps),,11172nd (235 lbs),Weight lifted: 235 lbs.
+41,MATT,CHRIST,24092,United States,North America,Age 34,Paradiso CrossFit Venice,,116326,14082nd (384 reps),,13293rd (14:30),225 reps,41255th (141 reps),,47696th (185 lbs),Weight lifted: 185 lbs.
+42,PHILIPPE,LAVOLE,24093,France,Europe,Age 35,CrossFit Teddygym,177 cm | 83 kg,116332,27823rd (376 reps),,22479th (15:50),225 reps,42627th (140 reps),,23403rd (215 lbs),Weight lifted: 215 lbs.
+43,GABRIEL,ZIENTEK,24094,United States,North America,Age 42,Kensington Valley CrossFit,70 in | 185 lb,116335,17141st (382 reps),,25508th (16:14),225 reps,31878th (147 reps),,41808th (190 lbs),Weight lifted: 190 lbs.
+44,OSCAR,NARVÁEZ,24095,Mexico,North America,Age 27,,,116338,31993rd (369 reps),,41492nd (18:18),225 reps,20242nd (157 reps),,22611th (215 lbs),Weight lifted: 215 lbs.
+45,MARK,METCALFE,24096,United Kingdom,Europe,Age 39,CW1 CrossFit,180 cm | 83 kg,116346,5047th (402 reps),,28137th (16:35),225 reps,29389th (149 reps),,53773rd (177 lbs),Weight lifted: 177 lbs.
+46,TYRONE,GREGORY-HURST,24097,Australia,Oceania,Age 17,CrossFit Hijacked,174 cm | 75 kg,116353,38536th (316 reps),,23706th (15:59),225 reps,13138th (168 reps),,40973rd (193 lbs),Weight lifted: 193 lbs.
+47,GARRETT,MAY,24098,United States,North America,Age 26,CrossFit Cornelius,68 in | 185 lb,116362,23455th (378 reps),,38191st (17:53),225 reps,25031st (153 reps),,29685th (205 lbs),Weight lifted: 205 lbs.
+48,STEFAN,MARIC,24099,Bosnia and Herzegovina,Europe,Age 27,CrossFit Banja Luka,183 cm | 78 kg,116363,21825th (379 reps),,42732nd (18:27),225 reps,22321st (155 reps),,29485th (205 lbs),Weight lifted: 205 lbs.
+49,BRIAN,GLOTZBACH,24100,United States,North America,Age 39,CrossFit QFE,74 in | 200 lb,116367,18749th (381 reps),,42054th (18:22),225 reps,28260th (150 reps),,27304th (207 lbs),Weight lifted: 207 lbs.

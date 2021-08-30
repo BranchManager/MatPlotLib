@@ -237,7 +237,7 @@ def Parse_into_table(parse_string,myinput):
                 
             
             print('last thing captured in for loop before added to list {}'.format(sps[i]))
-            mylist = [first_name,last_name,Place,country,continent,affiliate,age_and_or_height,
+            mylist = [first_name,last_name,Place,country,continent,age,affiliate,age_and_or_height,
                       points,firstWO,rept1,secondWO,rept2,thirdWO,rept3,fourthWO,rept4] 
             #df.loc[len(df)] = mylist
             lis.append(mylist)
@@ -253,15 +253,15 @@ def Parse_into_table(parse_string,myinput):
 #print(sys.platform)
 parse_this = ''
 if sys.platform == "linux":
-    PATH = "/home/nbranch/Documents/MatPlotLib/chromedriver"
+    PATH = "/home/branchmanager/Documents/MatPlotLib/chromedriver"
     secs = 5
 else:
     PATH = "/Users/noahbranch/Documents/CodeAndDev.nosync/Chrome_Driver/chromedriver"
     secs = 20
     
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760'
-#URL="https://games.crossfit.com/leaderboard/open/2021"
-URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2361"
+URL="https://games.crossfit.com/leaderboard/open/2021"
+#URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2361"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2062"
 #URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=482"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760"
@@ -272,7 +272,7 @@ if myinput == 1:
 
 
 columns=['first_name','lastname','Placing','country',
-                               'continent','affiliate','age_and_or_height',
+                               'continent','Age','affiliate','Height and Weight',
                               'points','21.1','21.1 time','21.2','21.2 time','21.3','21.3 time','21.4','weight']
 
 MyMainList = []
@@ -295,7 +295,7 @@ try:
     
 
     i = 0
-    for i in range(0,1):
+    for i in range(0,2750):
         print("index is now {}".format(i))
         if myinput == 1: 
             thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
@@ -335,7 +335,7 @@ try:
     THE_list.append(MyMainList)
     print(*THE_list,sep=", ")
     df = pd.DataFrame(MyMainList,columns=['first_name','lastname','Placing','country',
-                               'continent','affiliate','age_and_or_height',
+                               'continent','Age','affiliate','Height and Weight',
                               'points','21.1','21.1 time','21.2','21.2 time','21.3','21.3 time','21.4','weight'])
     df.to_csv("men_open_21.1.csv",columns = columns)
     #for i in MyMainList:
