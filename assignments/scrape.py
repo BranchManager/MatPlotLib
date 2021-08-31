@@ -29,7 +29,7 @@ def Parse_into_table(parse_string,myinput):
             text = file.read()
             print(text)'''
         import input
-        sps = input.my_list1056
+        sps = input.my_list1077
         print(sps)
 
         #sys.exit(1)
@@ -193,7 +193,7 @@ def Parse_into_table(parse_string,myinput):
                     if i+1 < len(sps):
                         i-=1
                         print("subtracting sps[i]= {} sps[i-1]={} sps[i+1]={}".format(sps[i],sps[i-1],sps[i+1]))
-                        print("sps[i+2] ={} sps[i+3] = {}".format(sps[i+2],sps[i+3]))
+                        if i+3 < len(sps): print("sps[i+2] ={} sps[i+3] = {}".format(sps[i+2],sps[i+3]))
 
 
                 elif 'squats' in sps[i]:
