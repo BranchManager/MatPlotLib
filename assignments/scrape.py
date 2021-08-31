@@ -29,7 +29,7 @@ def Parse_into_table(parse_string,myinput):
             text = file.read()
             print(text)'''
         import input
-        sps = input.my_list
+        sps = input.my_list1056
         print(sps)
 
         #sys.exit(1)
@@ -158,9 +158,23 @@ def Parse_into_table(parse_string,myinput):
                         i+=1
                     print("sps now before empty string check {}".format(sps[i]))
                     if i+1 < len(sps) and sps[i] == '':
-                        print("in -- I got a null \n")
-                        
-                        if i+2 < len(sps) and sps[i+2] == '': #if there are three consecutive empyt strings
+                        print("in -- I got a nul char \n")
+
+                        if i+1 < len(sps) and (sps[i]=='' and sps[i+1]!=''):
+                            ############
+                            if i+1 < len(sps) and'Judged by' in sps[i+1]:
+                                print('following is judged by in (--) {}'.format(sps[i+1]))
+                                i+=1
+                            if i+1 < len(sps) and '\t' in sps[i+1]:
+                        #print(sps[i])
+                                checkTab = True
+                                if i+3 < len(sps):i+=3
+                            elif i+1 < len(sps) and ''==sps[i+1]:
+                                checkTab = True
+                                print("empty spce after judged by in (--) {}".format(sps[i+3]))
+                                if i+4 < len(sps):i+=4
+                            ###########
+                        elif i+2 < len(sps) and sps[i+2] == '': #if there are three consecutive empyt strings
                             checkTab = True
                             i+=4
                             print("the next 2 one is {}".format(sps[i]))
@@ -180,6 +194,8 @@ def Parse_into_table(parse_string,myinput):
                         i-=1
                         print("subtracting sps[i]= {} sps[i-1]={} sps[i+1]={}".format(sps[i],sps[i-1],sps[i+1]))
                         print("sps[i+2] ={} sps[i+3] = {}".format(sps[i+2],sps[i+3]))
+
+
                 elif 'squats' in sps[i]:
                     while i+1 < len(sps) and 'Tiebreak'not in sps[i+1]:
                         i+=1
