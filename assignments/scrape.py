@@ -174,6 +174,10 @@ def Parse_into_table(parse_string,myinput):
                                 print("empty spce after judged by in (--) {}".format(sps[i+3]))
                                 if i+4 < len(sps):i+=4
                             ###########
+                        elif i+3 < len(sps) and sps[i+3] == '': #if there are 4 consecutive empty strings
+                            checkTab=True
+                            i+=5
+
                         elif i+2 < len(sps) and sps[i+2] == '': #if there are three consecutive empyt strings
                             checkTab = True
                             i+=4
@@ -274,7 +278,8 @@ if sys.platform == "linux":
 else:
     PATH = "/Users/noahbranch/Documents/CodeAndDev.nosync/Chrome_Driver/chromedriver"
     secs = 20
-URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=1077'   
+URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=1625'    
+#URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=1077'   
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760'
 #URL="https://games.crossfit.com/leaderboard/open/2021"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2361"
@@ -311,7 +316,7 @@ try:
     
 
     i = 0
-    for i in range(0,1):
+    for i in range(0,3):
         print("index is now {}".format(i))
         if myinput == 1: 
             thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
