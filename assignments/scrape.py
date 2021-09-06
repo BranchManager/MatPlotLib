@@ -29,7 +29,7 @@ def Parse_into_table(parse_string,myinput):
             text = file.read()
             print(text)'''
         import input
-        sps = input.my_list1077
+        sps = input.my_list1056
         print(sps)
 
         #sys.exit(1)
@@ -149,6 +149,10 @@ def Parse_into_table(parse_string,myinput):
                         #fourth = None
                     print(rep_or_time)
                 
+                    #while i+1 < len(sps) and not(sps[i].isnumeric()):
+                     #   l = 12
+                        #print("{} is not numeric so keep going".format(sps[i]))
+                                        
                     while i+1 < len(sps) and ('\t' != sps[i] and sps[i] != ''):
                         print("while in while loop or -- sps[i] = {}".format(sps[i]))
                         if sps[i] == '\t':
@@ -156,9 +160,17 @@ def Parse_into_table(parse_string,myinput):
                         if sps[i] == '':
                             print(" it is a empty string")
                         i+=1
-                    print("sps now before empty string check {}".format(sps[i]))
+                    #print("sps now before empty string check {}".format(sps[i]))
+                   
+                        
                     if i+1 < len(sps) and sps[i] == '':
-                        print("in -- I got a nul char \n")
+                        while i+1 < len(sps) and not(sps[i].isnumeric()):
+                            print("{} is not numeric so keep going".format(sps[i]))
+                            checkTab = True
+                            i+=1
+                        if i+1 < len(sps) and (checkTab == True and sps[i+1] == '\t'):
+                            i+=1
+                        '''print("in -- I got a nul char \n")
 
                         if i+1 < len(sps) and (sps[i]=='' and sps[i+1]!=''):
                             ############
@@ -192,7 +204,7 @@ def Parse_into_table(parse_string,myinput):
                     #if 'reps' in sps[i]:
                      #   if i+1 < len(sps): i+=1
                     #if 'Tiebreak' in sps[i]:
-                     #   if i+1 < len(sps): i+=1
+                     #   if i+1 < len(sps): i+=1'''
 
                     if i+1 < len(sps):
                         i-=1
