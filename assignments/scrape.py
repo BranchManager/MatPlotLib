@@ -92,6 +92,7 @@ def Parse_into_table(parse_string,myinput):
             if i+1 < len(sps):i+=1
             ###Maybe while loop start
             for j in range(4):
+                checkTab=False
                 WO = sps[i]
                 print("workout is {}".format(WO))
                 if j == 0:
@@ -100,14 +101,16 @@ def Parse_into_table(parse_string,myinput):
                 elif j == 1:
                     secondWO = WO;
                     rept2 = None
-                elif j == 2:
+                elif j == 2: 
                     thirdWO = WO;
                     rept3 = None
                 elif j == 3:
                     fourthWO = WO;
                     rept4 = None
                 #print('workout score {} of workout no {}'.format(WO,j))
+                
                 if i+1 < len(sps):i+=1
+                
                 
                 if 'front squats' in sps[i]:
                     #print("following is front squats")
@@ -254,9 +257,13 @@ def Parse_into_table(parse_string,myinput):
                     elif i+1 < len(sps) and ''==sps[i+1]:
                         if i+3 < len(sps):i+=3
 
-                elif i+1 < len(sps) and '\t' == sps[i+1]:
+                elif (i+1 < len(sps) and '\t' == sps[i+1]) or ('\t'==sps[i] and '- s' in WO):
+                    print("initial tab but check false \n")
+                    
                     if checkTab == False: #'Judged by' not in sps [i+1]:
-                        print('there was an initial tab')
+                        if '\t'==sps[i] and '- s' in WO:
+                            i-=1
+                        print('there was an initial tab and a false')
                         tab = '\t'
                         if i+2 < len(sps):i+=2
                     
@@ -290,7 +297,8 @@ if sys.platform == "linux":
 else:
     PATH = "/Users/noahbranch/Documents/CodeAndDev.nosync/Chrome_Driver/chromedriver"
     secs = 20
-URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=1685'
+URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2284'
+#URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=1685'
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=1625'    
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=1077'   
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760'
@@ -329,7 +337,7 @@ try:
     
 
     i = 0
-    for i in range(0,1):
+    for i in range(0,466):
         print("index is now {}".format(i))
         if myinput == 1: 
             thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
