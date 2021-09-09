@@ -29,7 +29,7 @@ def Parse_into_table(parse_string,myinput):
             text = file.read()
             print(text)'''
         import input
-        sps = input.my_list1056
+        sps = input.my_list
         print(sps)
 
         #sys.exit(1)
@@ -337,7 +337,7 @@ try:
     
 
     i = 0
-    for i in range(0,466):
+    for i in range(0,1):
         print("index is now {}".format(i))
         if myinput == 1: 
             thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
@@ -350,29 +350,30 @@ try:
 
         print('I have ReTuNeD!')
 
-        if myinput == 2:
-            sys.exit(1)
+        #if myinput == 2:
+        #    sys.exit(1)
         #display(table)
         #df.append(table)
         #df1.append(df2)
         #display(df)
         #print(*MyMainList, sep = ", ") 
+        if myinput == 1:
+            footer = driver.find_element_by_css_selector('.desktop.footer')
+            nums = footer.find_element_by_css_selector('.nums')
+            active = nums.find_element_by_css_selector('.active')
+            lets_look = active.get_attribute('innerText')
+            if lets_look == '2750':
+                break
+            print(lets_look)
 
-        footer = driver.find_element_by_css_selector('.desktop.footer')
-        nums = footer.find_element_by_css_selector('.nums')
-        active = nums.find_element_by_css_selector('.active')
-        lets_look = active.get_attribute('innerText')
-        if lets_look == '2750':
-            break
-        print(lets_look)
+        if myinput == 1:
+            time.sleep(5)
+            button = driver.find_element_by_css_selector('.btn.next')
 
-
-        time.sleep(5)
-        button = driver.find_element_by_css_selector('.btn.next')
         #print(button.get_attribute('innerHTML'))
-        button.click()
-        time.sleep(5)
-        print(driver.current_url)
+            button.click()
+            time.sleep(5)
+            print(driver.current_url)
     #df.loc[len(df)] = MyMainList
     THE_list.append(MyMainList)
     print(*THE_list,sep=", ")
@@ -380,6 +381,8 @@ try:
                                'continent','Age','affiliate','Height and Weight',
                               'points','21.1','21.1 time','21.2','21.2 time','21.3','21.3 time','21.4','weight'])
     df.to_csv("men_open_21.1.csv",columns = columns)
+    if myinput == 2:
+        sys.exit()
     #for i in MyMainList:
     #    if len(i) == 16:
      #       df.append(i)
