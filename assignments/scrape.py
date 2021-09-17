@@ -302,11 +302,14 @@ else:
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=1625'    
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=1077'   
 #URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760'
-URL="https://games.crossfit.com/leaderboard/open/2021"
+#URL="https://games.crossfit.com/leaderboard/open/2021"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2361"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=2062"
 #URL = "https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=482"
 #URL="https://games.crossfit.com/leaderboard/open/2021?view=0&division=1&region=0&scaled=0&sort=0&page=760"
+
+############ WOMEN URLS #############
+URL = 'https://games.crossfit.com/leaderboard/open/2021?view=0&division=2&region=0&scaled=0&sort=0'
 
 myinput = int(input("1. Scrape website \n2. Read file \n"))
 if myinput == 1:
@@ -380,7 +383,7 @@ try:
     df = pd.DataFrame(MyMainList,columns=['first_name','lastname','Placing','country',
                                'continent','Age','affiliate','Height and Weight',
                               'points','21.1','21.1 time','21.2','21.2 time','21.3','21.3 time','21.4','weight'])
-    df.to_csv("men_open_21.1.csv",columns = columns)
+    df.to_csv("women_open_21.1.csv",columns = columns)
     if myinput == 2:
         sys.exit()
     #for i in MyMainList:
