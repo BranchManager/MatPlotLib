@@ -337,7 +337,7 @@ try:
     
 
     i = 0
-    for i in range(0,2750):
+    for i in range(0,1):
         print("index is now {}".format(i))
         if myinput == 1: 
             thirdDiv = driver.find_element_by_id('leaderboardSponsorVisible')
