@@ -1,0 +1,6 @@
+in coursera jupyter notebook
+currently working on
+1. Module 2
+2.Assignment 2
+3. moby.txt for assignment 2
+4. install nltk library
